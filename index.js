@@ -18,7 +18,7 @@ const db = require('knex')({
 
 app.get('/', function (req, res) {
   // res.send('It is working!');
-  knex.select("*").from('users');
+  res.send(db.select("*").from('users'));
 })
 
 app.listen(80, function () {
